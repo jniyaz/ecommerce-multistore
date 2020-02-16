@@ -12,7 +12,7 @@
                     <p class="card-text">Text</p>
                 </div>
                 <div class="card-body">
-                    <a href="#" class="card-link">Add to card</a>
+                    <a href="{{ route('cart.add', $item->id) }}" class="card-link btn btn-sm btn-success">Add to card</a>
                 </div>
             </div>
         </div>
