@@ -3,21 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        @foreach ($products as $item)
+        <div class="col-4">
             <div class="card">
-                <div class="card-header">Dashboard</div>
-
+                <img class="card-img-top" src="/assets/images/cat.jpg" alt="Card image cap">
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+                    <h4 class="card-title">{{ $item->name }}</h4>
+                    <p class="card-text">Text</p>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="card-link">Add to card</a>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </div>
 @endsection
