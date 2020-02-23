@@ -37,7 +37,7 @@
             <h3>Total : ${{ \Cart::session(auth()->id())->getTotal() }}</h3>
         </div>
         <div class="row">
-            <a class="btn btn-primary" href="">Proceed to checkout</a>
+            <a class="btn btn-primary" href="{{ route('checkout.index') }}">Proceed to checkout</a>
         </div>
     </div>
 </div>

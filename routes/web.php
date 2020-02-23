@@ -15,6 +15,9 @@ Route::get('/cart/add/{product}', 'CartController@add')->name('cart.add')->middl
 Route::get('/cart/update/{id}', 'CartController@update')->name('cart.update')->middleware('auth');
 Route::get('/cart/destory/{id}', 'CartController@destroy')->name('cart.destroy')->middleware('auth');
 
+Route::get('/checkout', 'CheckoutController@index')->name('checkout.index')->middleware('auth');
+
+Route::resource('/orders', 'OrderController')->middleware('auth');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
