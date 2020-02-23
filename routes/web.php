@@ -25,3 +25,8 @@ Route::get('/paypal/checkout-cancel', 'PaypalController@getPaypalCancelPage')->n
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
