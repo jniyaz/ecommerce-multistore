@@ -8,7 +8,7 @@ Thank you for purchase. Please check below your receipt.
         <tr>
             <th>Product Name</th>
             <th>Quantity</th>
-            <th>Proce</th>
+            <th>Price</th>
         </tr>
     </thead>
     <tbody>
