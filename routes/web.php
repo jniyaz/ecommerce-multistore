@@ -19,5 +19,9 @@ Route::get('/checkout', 'CheckoutController@index')->name('checkout.index')->mid
 
 Route::resource('/orders', 'OrderController')->middleware('auth');
 
+Route::get('/paypal/checkout', 'PaypalController@getExpressCheckout')->name('paypal.checkout');
+Route::get('/paypal/checkout-success', 'PaypalController@getExpressCheckoutSuccess')->name('paypal.success');
+Route::get('/paypal/checkout-cancel', 'PaypalController@getPaypalCancelPage')->name('paypal.cancel');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

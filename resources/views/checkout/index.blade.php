@@ -36,7 +36,22 @@
                   <label for="">Zip Code</label>
                   <input type="text" name="shipping_zipcode" id="" class="form-control" placeholder="Zipcode" aria-describedby="helpId">
                 </div>
-                <div class="form-group">
+
+                <h3>Payment Methods</h3>
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="payment_method" id="payment_method" value="cash_delivery" checked>
+                    Cash on delivery
+                  </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="payment_method" id="payment_method" value="paypal">
+                    Paypal
+                  </label>
+                </div>
+
+                <div class="form-group mt-3">
                     <input type="submit" id="submit" class="btn btn-primary" value="Submit">
                   </div>
             </form>
