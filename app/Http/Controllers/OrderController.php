@@ -74,6 +74,10 @@ class OrderController extends Controller
             $order->billing_phone = $request->input('billing_phone');
         }
 
+        if ($request->input('payment_method') == 'paypal') {
+            $order->payment_method = 'paypal';
+        }
+
         $order->grand_total = \Cart::session(auth()->id())->getTotal();
         $order->items_count = \Cart::session(auth()->id())->getContent()->count();
         $order->user_id = auth()->id();
@@ -86,9 +90,9 @@ class OrderController extends Controller
         }
 
         // Payment logics
+        // redirect to paypal
         if ($request->input('payment_method') == 'paypal') {
-            // redirect to paypal
-            return redirect()->route('paypal.checkout');
+            return redirect()->route('paypal.checkout', $order->id);
         }
 
         // empty cart
@@ -98,7 +102,7 @@ class OrderController extends Controller
 
         // redirect
 
-        dd('Order completed, Thank you for purchase');
+        return redirect()->route('products.home')->withMessage('Your order has been placed.');
     }
 
     /**
