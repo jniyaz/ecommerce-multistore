@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ShopActivationRequest;
 use App\Shop;
 use App\User;
 use Illuminate\Http\Request;
+use App\Mail\ShopActivationRequest;
 use Illuminate\Support\Facades\Mail;
 
 class ShopController extends Controller
@@ -67,7 +67,7 @@ class ShopController extends Controller
      */
     public function show(Shop $shop)
     {
-        //
+        dd('Welcome to your shop..');
     }
 
     /**
