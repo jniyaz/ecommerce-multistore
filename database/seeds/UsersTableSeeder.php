@@ -12,13 +12,13 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('users')->delete();
-        
-        \DB::table('users')->insert(array (
-            0 => 
-            array (
+
+        \DB::table('users')->insert(array(
+            0 =>
+            array(
                 'id' => 1,
                 'role_id' => 1,
                 'name' => 'Niyaz',
@@ -31,8 +31,34 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2020-02-23 05:40:46',
                 'updated_at' => '2020-02-23 06:35:27',
             ),
+            1 =>
+            array(
+                'id' => 2,
+                'role_id' => 1,
+                'name' => 'Admin',
+                'email' => 'admin@ewebmall.com',
+                'avatar' => 'users/default.png',
+                'email_verified_at' => NULL,
+                'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
+                'remember_token' => NULL,
+                'settings' => NULL,
+                'created_at' => '2020-02-23 05:40:46',
+                'updated_at' => '2020-02-23 06:35:27',
+            ),
+            2 =>
+            array(
+                'id' => 3,
+                'role_id' => 2,
+                'name' => 'Customer 1',
+                'email' => 'customer@test.com',
+                'avatar' => 'users/default.png',
+                'email_verified_at' => NULL,
+                'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
+                'remember_token' => NULL,
+                'settings' => NULL,
+                'created_at' => '2020-02-23 05:40:46',
+                'updated_at' => '2020-02-23 06:35:27',
+            ),
         ));
-        
-        
     }
 }
