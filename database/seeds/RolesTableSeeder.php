@@ -21,7 +21,7 @@ class RolesTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'name' => 'admin',
-                'display_name' => 'Admin User',
+                'display_name' => 'Administrator',
                 'created_at' => now(),
                 'updated_at' => now(),
             ),
@@ -29,7 +29,7 @@ class RolesTableSeeder extends Seeder
             array (
                 'id' => 2,
                 'name' => 'user',
-                'display_name' => 'Normal User',
+                'display_name' => 'Normal',
                 'created_at' => now(),
                 'updated_at' => now(),
             ),
@@ -37,7 +37,7 @@ class RolesTableSeeder extends Seeder
             array (
                 'id' => 3,
                 'name' => 'seller',
-                'display_name' => 'Seller User',
+                'display_name' => 'Seller',
                 'created_at' => now(),
                 'updated_at' => now(),
             ),

@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use TCG\Voyager\Database\Schema\SchemaManager;
 use \TCG\Voyager\Http\Controllers\VoyagerBaseController;
 
-class ShopController extends VoyagerBaseController
+class ProductController extends VoyagerBaseController
 {
     //***************************************
     //               ____
@@ -64,9 +64,9 @@ class ShopController extends VoyagerBaseController
                 $query = $model::select('*');
             }
 
-            // Query to display seller's shop only
+            // Query to display seller's products only
             if (Auth::user()->hasRole('seller')) {
-                $query->where('user_id', Auth::id());
+                $query->where('shop_id', Auth::user()->shop->id);
             }
 
             // Use withTrashed() if model uses SoftDeletes and if toggle is selected

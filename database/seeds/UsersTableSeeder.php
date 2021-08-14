@@ -28,8 +28,8 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
                 'remember_token' => NULL,
                 'settings' => NULL,
-                'created_at' => '2020-02-23 05:40:46',
-                'updated_at' => '2020-02-23 06:35:27',
+                'created_at' => now(),
+                'updated_at' => now(),
             ),
             1 =>
             array(
@@ -42,8 +42,8 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
                 'remember_token' => NULL,
                 'settings' => NULL,
-                'created_at' => '2020-02-23 05:40:46',
-                'updated_at' => '2020-02-23 06:35:27',
+                'created_at' => now(),
+                'updated_at' => now(),
             ),
             2 =>
             array(
@@ -56,8 +56,8 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
                 'remember_token' => NULL,
                 'settings' => NULL,
-                'created_at' => '2020-02-23 05:40:46',
-                'updated_at' => '2020-02-23 06:35:27',
+                'created_at' => now(),
+                'updated_at' => now(),
             ),
             3 =>
             array(
@@ -70,8 +70,8 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
                 'remember_token' => NULL,
                 'settings' => NULL,
-                'created_at' => '2020-02-23 05:40:46',
-                'updated_at' => '2020-02-23 06:35:27',
+                'created_at' => now(),
+                'updated_at' => now(),
             ),
             4 =>
             array(
@@ -84,8 +84,8 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
                 'remember_token' => NULL,
                 'settings' => NULL,
-                'created_at' => '2020-02-23 05:40:46',
-                'updated_at' => '2020-02-23 06:35:27',
+                'created_at' => now(),
+                'updated_at' => now(),
             ),
         ));
     }
