@@ -8,176 +8,33 @@
                 <h3>All Departments</h3>
                 <div class="category-menu-list">
                     <ul>
+                        @foreach($categories as $category)
+                        @php
+                            $child = \TCG\Voyager\Models\Category::where('parent_id', $category->id)->get()
+                        @endphp
                         <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/15.png">Computer & Laptops <i class="pe-7s-angle-right"></i></a>
-                            <div class="category-menu-dropdown">
-                                <div class="category-dropdown-style category-common4 mb-40">
-                                    <h4 class="categories-subtitle"> Desktop</h4>
-                                    <ul>
-                                        <li><a href="#"> Mother Board</a></li>
-                                        <li><a href="#"> Power Supply</a></li>
-                                        <li><a href="#"> RAM</a></li>
-                                        <li><a href="#"> Graphics Card</a></li>
-                                        <li><a href="#"> Hard Disk Drive</a></li>
-                                        <li><a href="#">Cooling Fan</a></li>
-                                        <li><a href="#">HD Cable</a></li>
-                                    </ul>
+                            <a href="#"><img alt="" src="assets/img/icon-img/15.png">{{ $category->name }} @if($child->isNotEmpty())<i class="pe-7s-angle-right"></i>@endif</a>
+                            @if($child->isNotEmpty())
+                                <div class="category-menu-dropdown">
+                                    @foreach($child as $item)
+                                    <div class="category-dropdown-style category-common4 mb-40">
+                                        <h4 class="categories-subtitle">{{ $item->name }}</h4>
+                                        <ul>
+                                            @php
+                                                $grandChild = \TCG\Voyager\Models\Category::where('parent_id', $item->id)->get();
+                                            @endphp
+                                            @if($grandChild->isNotEmpty())
+                                                @foreach ($grandChild as $c)
+                                                    <li><a href="#">{{ $c->name }}</a></li>
+                                                @endforeach
+                                            @endif
+                                        </ul>
+                                    </div>
+                                    @endforeach
                                 </div>
-                                <div class="category-dropdown-style category-common4 mb-40">
-                                    <h4 class="categories-subtitle"> Laptop</h4>
-                                    <ul>
-                                        <li><a href="#">HP</a></li>
-                                        <li><a href="#">lenovo</a></li>
-                                        <li><a href="#"> vivo</a></li>
-                                        <li><a href="#">   Mack Book Air</a></li>
-                                        <li><a href="#"> Mack Book Pro</a></li>
-                                        <li><a href="#"> LG</a></li>
-                                        <li><a href="#"> Others Brand</a></li>
-                                    </ul>
-                                </div>
-                                <div class="category-dropdown-style category-common4 mb-40">
-                                    <h4 class="categories-subtitle">Others</h4>
-                                    <ul>
-                                        <li><a href="#">Monitor</a></li>
-                                        <li><a href="#">Mouse</a></li>
-                                        <li><a href="#">Keybord</a></li>
-                                        <li><a href="#">Speaker</a></li>
-                                        <li><a href="#">Joy Stick</a></li>
-                                        <li><a href="#">Wireless Speaker</a></li>
-                                        <li><a href="#">Software</a></li>
-                                    </ul>
-                                </div>
-                                <div class="category-dropdown-style category-common4 mb-40">
-                                    <h4 class="categories-subtitle">Accessories</h4>
-                                    <ul class="border-none">
-                                        <li><a href="#">Monitor</a></li>
-                                        <li><a href="#">Mouse</a></li>
-                                        <li><a href="#">Keybord</a></li>
-                                        <li><a href="#">Speaker</a></li>
-                                        <li><a href="#">Joy Stick</a></li>
-                                        <li><a href="#">Wireless Speaker</a></li>
-                                        <li><a href="#">Software</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-banner-img">
-                                    <a href="single-product.html">
-                                        <img src="assets/img/banner/18.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
+                            @endif
                         </li>
-                        <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/16.png">Phone & Tablets <i class="pe-7s-angle-right"></i></a>
-                            <div class="category-menu-dropdown">
-                                <div class="category-dropdown-style category-common4">
-                                    <h4 class="categories-subtitle"> Desktop</h4>
-                                    <ul>
-                                        <li><a href="#"> Mother Board</a></li>
-                                        <li><a href="#"> Power Supply</a></li>
-                                        <li><a href="#"> RAM</a></li>
-                                        <li><a href="#"> Graphics Card</a></li>
-                                        <li><a href="#"> Hard Disk Drive</a></li>
-                                        <li><a href="#">Cooling Fan</a></li>
-                                        <li><a href="#">HD Cable</a></li>
-                                    </ul>
-                                </div>
-                                <div class="category-dropdown-style category-common4">
-                                    <h4 class="categories-subtitle"> Laptop</h4>
-                                    <ul>
-                                        <li><a href="#">HP</a></li>
-                                        <li><a href="#">lenovo</a></li>
-                                        <li><a href="#"> vivo</a></li>
-                                        <li><a href="#">   Mack Book Air</a></li>
-                                        <li><a href="#"> Mack Book Pro</a></li>
-                                        <li><a href="#"> LG</a></li>
-                                        <li><a href="#"> Others Brand</a></li>
-                                    </ul>
-                                </div>
-                                <div class="category-dropdown-style category-common4">
-                                    <h4 class="categories-subtitle">Others</h4>
-                                    <ul>
-                                        <li><a href="#">Monitor</a></li>
-                                        <li><a href="#">Mouse</a></li>
-                                        <li><a href="#">Keybord</a></li>
-                                        <li><a href="#">Speaker</a></li>
-                                        <li><a href="#">Joy Stick</a></li>
-                                        <li><a href="#">Wireless Speaker</a></li>
-                                        <li><a href="#">Software</a></li>
-                                    </ul>
-                                </div>
-                                <div class="category-dropdown-style category-common4">
-                                    <h4 class="categories-subtitle">Accessories</h4>
-                                    <ul class="border-none">
-                                        <li><a href="#">Monitor</a></li>
-                                        <li><a href="#">Mouse</a></li>
-                                        <li><a href="#">Keybord</a></li>
-                                        <li><a href="#">Speaker</a></li>
-                                        <li><a href="#">Joy Stick</a></li>
-                                        <li><a href="#">Wireless Speaker</a></li>
-                                        <li><a href="#">Software</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/17.png"> Camera & Photos<i class="pe-7s-angle-right"></i></a>
-                            <div class="category-menu-dropdown">
-                                <div class="category-dropdown-style category-common3">
-                                    <h4 class="categories-subtitle"> Desktop</h4>
-                                    <ul>
-                                        <li><a href="#"> Mother Board</a></li>
-                                        <li><a href="#"> Power Supply</a></li>
-                                        <li><a href="#"> RAM</a></li>
-                                        <li><a href="#"> Graphics Card</a></li>
-                                        <li><a href="#"> Hard Disk Drive</a></li>
-                                        <li><a href="#">Cooling Fan</a></li>
-                                        <li><a href="#">HD Cable</a></li>
-                                    </ul>
-                                </div>
-                                <div class="category-dropdown-style category-common3">
-                                    <h4 class="categories-subtitle"> Laptop</h4>
-                                    <ul>
-                                        <li><a href="#">HP</a></li>
-                                        <li><a href="#">lenovo</a></li>
-                                        <li><a href="#"> vivo</a></li>
-                                        <li><a href="#">   Mack Book Air</a></li>
-                                        <li><a href="#"> Mack Book Pro</a></li>
-                                        <li><a href="#"> LG</a></li>
-                                        <li><a href="#"> Others Brand</a></li>
-                                    </ul>
-                                </div>
-                                <div class="category-dropdown-style category-common3">
-                                    <h4 class="categories-subtitle">Others</h4>
-                                    <ul class="border-none">
-                                        <li><a href="#">Monitor</a></li>
-                                        <li><a href="#">Mouse</a></li>
-                                        <li><a href="#">Keybord</a></li>
-                                        <li><a href="#">Speaker</a></li>
-                                        <li><a href="#">Joy Stick</a></li>
-                                        <li><a href="#">Wireless Speaker</a></li>
-                                        <li><a href="#">Software</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/18.png">TV & Audio </a>
-                        </li>
-                        <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/19.png"> Game & Play Station</a>
-                        </li>
-                        <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/20.png"> Car Electronics </a>
-                        </li>
-                        <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/21.png"> Accessories </a>
-                        </li>
-                        <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/22.png"> Gadgets</a>
-                        </li>
-                        <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/23.png">Others Equipment</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
