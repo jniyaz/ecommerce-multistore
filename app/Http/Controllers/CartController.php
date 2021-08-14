@@ -11,7 +11,7 @@ class CartController extends Controller
     public function index()
     {
         $cartItems = \Cart::session(auth()->id())->getContent();
-        return view('cart.index', compact('cartItems'));
+        return view('front.pages.cart', compact('cartItems'));
     }
 
     public function add(Product $product)
