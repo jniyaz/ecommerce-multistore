@@ -13,7 +13,7 @@
                             $child = \TCG\Voyager\Models\Category::where('parent_id', $category->id)->get()
                         @endphp
                         <li>
-                            <a href="{{ route('products.index', ['cid' => $category->id]) }}"><img alt="" src="assets/img/icon-img/15.png">{{ $category->name }} @if($child->isNotEmpty())<i class="pe-7s-angle-right"></i>@endif</a>
+                            <a href="{{ route('products.index', ['cid' => $category->id]) }}"><img alt="" src="/assets/img/icon-img/15.png">{{ $category->name }} @if($child->isNotEmpty())<i class="pe-7s-angle-right"></i>@endif</a>
                             @if($child->isNotEmpty())
                                 <div class="category-menu-dropdown">
                                     @foreach($child as $item)
@@ -103,7 +103,7 @@
                             </div>
                             <div class="mega-banner-img">
                                 <a href="single-product.html">
-                                    <img src="assets/img/banner/18.jpg" alt="">
+                                    <img src="/assets/img/banner/18.jpg" alt="">
                                 </a>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
 </div>
 <div class="slider-area">
     <div class="slider-active owl-carousel">
-        <div class="single-slider-4 slider-height-4 bg-img" style="background-image: url(assets/img/slider/6.jpg)">
+        <div class="single-slider-4 slider-height-4 bg-img" style="background-image: url(/assets/img/slider/6.jpg)">
             <div class="container">
                 <div class="slider-content-4 fadeinup-animated">
                     <h2 class="animated">Say hello! to the <br>future.</h2>
@@ -134,7 +134,7 @@
                 </div>
             </div>
         </div>
-        <div class="single-slider-4 slider-height-4 bg-img" style="background-image: url(assets/img/slider/6.jpg)">
+        <div class="single-slider-4 slider-height-4 bg-img" style="background-image: url(/assets/img/slider/6.jpg)">
             <div class="container">
                 <div class="slider-content-4 fadeinup-animated">
                     <h2 class="animated">Say hello! to the <br>future.</h2>
@@ -161,7 +161,7 @@
 {{-- Todo: need to implement followinf features  --}}
 {{-- <div class="banner-area wrapper-padding pt-15 pb-95 gray-bg-7">
     <div class="container">
-        <div class="electro-fexible-banner bg-img" style="background-image: url(assets/img/banner/23.jpg)">
+        <div class="electro-fexible-banner bg-img" style="background-image: url(/assets/img/banner/23.jpg)">
             <div class="fexible-content fexible-content-2 ">
                 <h3>Play with flexible</h3>
                 <p>Multicontrol Smooth Controller, Black Color All Buttons
@@ -181,7 +181,7 @@
                 <div class="best-selling-left">
                     <div class="product-wrapper">
                         <div class="product-img-4">
-                            <a href="#"><img src="assets/img/product/electro/9.jpg" alt=""></a>
+                            <a href="#"><img src="/assets/img/product/electro/9.jpg" alt=""></a>
                             <div class="product-action-right">
                                 <a class="animate-top" title="Add To Cart" href="#">
                                     <i class="pe-7s-cart"></i>
@@ -214,7 +214,7 @@
                                 <div class="product-wrapper mb-6">
                                     <div class="product-img-4">
                                         <a href="#">
-                                            <img src="assets/img/product/electro/10.jpg" alt="">
+                                            <img src="/assets/img/product/electro/10.jpg" alt="">
                                         </a>
                                         <div class="product-action-right">
                                             <a class="animate-top" title="Add To Cart" href="#">
@@ -242,7 +242,7 @@
                                 <div class="product-wrapper mb-6">
                                     <div class="product-img-4">
                                         <a href="#">
-                                            <img src="assets/img/product/electro/11.jpg" alt="">
+                                            <img src="/assets/img/product/electro/11.jpg" alt="">
                                         </a>
                                         <div class="product-action-right">
                                             <a class="animate-top" title="Add To Cart" href="#">
@@ -270,7 +270,7 @@
                                 <div class="product-wrapper mb-6">
                                     <div class="product-img-4">
                                         <a href="#">
-                                            <img src="assets/img/product/electro/12.jpg" alt="">
+                                            <img src="/assets/img/product/electro/12.jpg" alt="">
                                         </a>
                                         <div class="product-action-right">
                                             <a class="animate-top" title="Add To Cart" href="#">
@@ -298,7 +298,7 @@
                                 <div class="product-wrapper mb-6">
                                     <div class="product-img-4">
                                         <a href="#">
-                                            <img src="assets/img/product/electro/13.jpg" alt="">
+                                            <img src="/assets/img/product/electro/13.jpg" alt="">
                                         </a>
                                         <div class="product-action-right">
                                             <a class="animate-top" title="Add To Cart" href="#">
@@ -326,7 +326,7 @@
                                 <div class="product-wrapper mb-6">
                                     <div class="product-img-4">
                                         <a href="#">
-                                            <img src="assets/img/product/electro/14.jpg" alt="">
+                                            <img src="/assets/img/product/electro/14.jpg" alt="">
                                         </a>
                                         <div class="product-action-right">
                                             <a class="animate-top" title="Add To Cart" href="#">
@@ -354,7 +354,7 @@
                                 <div class="product-wrapper mb-6">
                                     <div class="product-img-4">
                                         <a href="#">
-                                            <img src="assets/img/product/electro/15.jpg" alt="">
+                                            <img src="/assets/img/product/electro/15.jpg" alt="">
                                         </a>
                                         <div class="product-action-right">
                                             <a class="animate-top" title="Add To Cart" href="#">
@@ -387,7 +387,7 @@
 </div>
 <div class="androit-banner-wrapper wrapper-padding pt-100 pb-175">
     <div class="container-fluid">
-        <div class="androit-banner-img bg-img" style="background-image: url(assets/img/banner/36.jpg)">
+        <div class="androit-banner-img bg-img" style="background-image: url(/assets/img/banner/36.jpg)">
             <div class="androit-banner-content">
                 <h3>Xolo Fast T2 Smartphone, Android <br>7.0 Unlocked.</h3>
                 <a href="product-details.html">Buy Now →</a>
@@ -399,7 +399,7 @@
                 </div>
             </div>
             <div class="phn-img">
-                <img src="assets/img/banner/10.png" alt="">
+                <img src="/assets/img/banner/10.png" alt="">
             </div>
         </div>
     </div>
@@ -411,7 +411,7 @@
                 <div class="product-wrapper product-wrapper-border mb-30">
                     <div class="product-img-5">
                         <a href="#">
-                            <img src="assets/img/product/electro/16.jpg" alt="">
+                            <img src="/assets/img/product/electro/16.jpg" alt="">
                         </a>
                     </div>
                     <div class="product-content-7">
@@ -442,7 +442,7 @@
                 <div class="product-wrapper product-wrapper-border mb-30">
                     <div class="product-img-5">
                         <a href="#">
-                            <img src="assets/img/product/electro/17.jpg" alt="">
+                            <img src="/assets/img/product/electro/17.jpg" alt="">
                         </a>
                     </div>
                     <div class="product-content-7">
@@ -473,7 +473,7 @@
                 <div class="product-wrapper product-wrapper-border mb-30">
                     <div class="product-img-5">
                         <a href="#">
-                            <img src="assets/img/product/electro/18.jpg" alt="">
+                            <img src="/assets/img/product/electro/18.jpg" alt="">
                         </a>
                     </div>
                     <div class="product-content-7">
@@ -504,7 +504,7 @@
                 <div class="product-wrapper product-wrapper-border mb-30">
                     <div class="product-img-5">
                         <a href="#">
-                            <img src="assets/img/product/electro/19.jpg" alt="">
+                            <img src="/assets/img/product/electro/19.jpg" alt="">
                         </a>
                     </div>
                     <div class="product-content-7">
@@ -535,7 +535,7 @@
                 <div class="product-wrapper product-wrapper-border mb-30">
                     <div class="product-img-5">
                         <a href="#">
-                            <img src="assets/img/product/electro/20.jpg" alt="">
+                            <img src="/assets/img/product/electro/20.jpg" alt="">
                         </a>
                     </div>
                     <div class="product-content-7">
@@ -566,7 +566,7 @@
                 <div class="product-wrapper product-wrapper-border mb-30">
                     <div class="product-img-5">
                         <a href="#">
-                            <img src="assets/img/product/electro/21.jpg" alt="">
+                            <img src="/assets/img/product/electro/21.jpg" alt="">
                         </a>
                     </div>
                     <div class="product-content-7">
@@ -600,28 +600,28 @@
     <div class="container-fluid">
         <div class="brand-logo-active2 owl-carousel">
             <div class="single-brand">
-                <img src="assets/img/brand-logo/7.png" alt="">
+                <img src="/assets/img/brand-logo/7.png" alt="">
             </div>
             <div class="single-brand">
-                <img src="assets/img/brand-logo/8.png" alt="">
+                <img src="/assets/img/brand-logo/8.png" alt="">
             </div>
             <div class="single-brand">
-                <img src="assets/img/brand-logo/9.png" alt="">
+                <img src="/assets/img/brand-logo/9.png" alt="">
             </div>
             <div class="single-brand">
-                <img src="assets/img/brand-logo/10.png" alt="">
+                <img src="/assets/img/brand-logo/10.png" alt="">
             </div>
             <div class="single-brand">
-                <img src="assets/img/brand-logo/11.png" alt="">
+                <img src="/assets/img/brand-logo/11.png" alt="">
             </div>
             <div class="single-brand">
-                <img src="assets/img/brand-logo/12.png" alt="">
+                <img src="/assets/img/brand-logo/12.png" alt="">
             </div>
             <div class="single-brand">
-                <img src="assets/img/brand-logo/13.png" alt="">
+                <img src="/assets/img/brand-logo/13.png" alt="">
             </div>
             <div class="single-brand">
-                <img src="assets/img/brand-logo/7.png" alt="">
+                <img src="/assets/img/brand-logo/7.png" alt="">
             </div>
             <div class="single-brand">
                 <img src="assets/img/brand-logo/8.png" alt="">

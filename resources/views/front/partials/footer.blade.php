@@ -45,7 +45,7 @@
                                     <th></th>
                                     <th>
                                         <a href="#">Remove <span>x</span></a>
-                                        <img src="assets/img/cart/4.jpg" alt="">
+                                        <img src="/assets/img/cart/4.jpg" alt="">
                                         <p>Blush Sequin Top </p>
                                         <span>$75.99</span>
                                         <a class="compare-btn" href="#">Add to cart</a>

@@ -158,7 +158,7 @@
                             <div class="shop-bar pb-60">
                                 <div class="shop-found-selector">
                                     <div class="shop-found">
-                                        <p><span>{{ count($products) }}</span> Products found</p>
+                                        <p><span>{{ $products->total() }}</span> Products found</p>
                                     </div>
                                     <div class="shop-selector">
                                         <label>Sort By : </label>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pagination-style mt-50 text-center">
+                    {{-- <div class="pagination-style mt-50 text-center">
                         <ul>
                             <li><a href="#"><i class="ti-angle-left"></i></a></li>
                             <li><a href="#">1</a></li>
@@ -263,6 +263,9 @@
                             <li><a href="#">19</a></li>
                             <li class="active"><a href="#"><i class="ti-angle-right"></i></a></li>
                         </ul>
+                    </div> --}}
+                    <div class="mt-50 text-center">
+                    {{ $products->appends(['q' => request('q')])->render() }}
                     </div>
                 </div>
             </div>

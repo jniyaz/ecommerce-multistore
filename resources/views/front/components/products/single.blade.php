@@ -2,7 +2,7 @@
     <div class="product-wrapper mb-30">
         <div class="product-img-3">
             <a href="#">
-                <img src="assets/img/product/electro/22.jpg" alt="">
+                <img src="/assets/img/product/electro/22.jpg" alt="">
             </a>
             <div class="hanicraft-action-position">
                 <div class="hanicraft-action">
