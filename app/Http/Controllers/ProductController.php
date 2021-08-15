@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,16 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::take(20)->get();
-        return view('front.pages.home')->with(['products' => $products]);
+        $categoryId = request('cid');
+        $categoryName = null;
+        if($categoryId) {
+            $category = Category::find($categoryId);
+            $categoryName = ucfirst($category->name);
+            $products = $category->allProducts()->unique('name');
+        } else {
+            $products = Product::take(20)->get();
+        }
+        return view('front.pages.products.index', compact('categoryName', 'products'));
     }
 
     /**

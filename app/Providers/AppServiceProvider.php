@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Shop;
 use App\Observers\ShopObserver;
 use Illuminate\Support\ServiceProvider;
+use TCG\Voyager\Facades\Voyager;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Voyager::useModel('Category', \App\Category::class);
     }
 
     /**

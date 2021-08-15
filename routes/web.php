@@ -5,9 +5,6 @@
 | Web Routes
 |--------------------------------------------------------------------------
 */
-// Auth
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
 
 // Home
 Route::get('/', 'HomePageController@index')->name('home.index');
@@ -31,7 +28,11 @@ Route::resource('/orders', 'OrderController')->middleware('auth');
 Route::resource('/shops', 'ShopController')->middleware('auth');
 
 // Products
-Route::get('/products', 'ProductController@index')->name('products.home');
+Route::resource('/products', 'ProductController');
+
+// Auth
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
 // Voyager - Admin
 Route::group(['prefix' => 'admin'], function () {

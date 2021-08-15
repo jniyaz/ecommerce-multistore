@@ -13,19 +13,21 @@
                             $child = \TCG\Voyager\Models\Category::where('parent_id', $category->id)->get()
                         @endphp
                         <li>
-                            <a href="#"><img alt="" src="assets/img/icon-img/15.png">{{ $category->name }} @if($child->isNotEmpty())<i class="pe-7s-angle-right"></i>@endif</a>
+                            <a href="{{ route('products.index', ['cid' => $category->id]) }}"><img alt="" src="assets/img/icon-img/15.png">{{ $category->name }} @if($child->isNotEmpty())<i class="pe-7s-angle-right"></i>@endif</a>
                             @if($child->isNotEmpty())
                                 <div class="category-menu-dropdown">
                                     @foreach($child as $item)
                                     <div class="category-dropdown-style category-common4 mb-40">
-                                        <h4 class="categories-subtitle">{{ $item->name }}</h4>
+                                        <h4 class="categories-subtitle">
+                                            <a href="{{ route('products.index', ['cid' => $item->id]) }}">{{ $item->name }}</a>
+                                        </h4>
                                         <ul>
                                             @php
                                                 $grandChild = \TCG\Voyager\Models\Category::where('parent_id', $item->id)->get();
                                             @endphp
                                             @if($grandChild->isNotEmpty())
-                                                @foreach ($grandChild as $c)
-                                                    <li><a href="#">{{ $c->name }}</a></li>
+                                                @foreach ($grandChild as $ch)
+                                                    <li><a href="{{ route('products.index', ['cid' => $ch->id]) }}">{{ $ch->name }}</a></li>
                                                 @endforeach
                                             @endif
                                         </ul>
@@ -151,33 +153,7 @@
         </div>
         <div class="row">
             @foreach($products as $product)
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-wrapper mb-30">
-                        <div class="product-img-3">
-                            <a href="#">
-                                <img src="assets/img/product/electro/22.jpg" alt="">
-                            </a>
-                            <div class="hanicraft-action-position">
-                                <div class="hanicraft-action">
-                                    <a class="action-cart" title="Add To Cart" href="{{ route('cart.add', $product->id) }}">
-                                        <i class="pe-7s-cart"></i>
-                                    </a>
-                                    <a class="action-like" title="Wishlist" href="#">
-                                        <i class="pe-7s-like"></i>
-                                    </a>
-                                    <a class="action-repeat" title="Compare" href="#" data-toggle="modal" data-target="#exampleCompare" >
-                                        <i class="pe-7s-repeat"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-content-electro2 text-center">
-                            <h3><a href="product-details.html">{{ $product->name }}</a></h3>
-                            <span>Black</span>
-                            <h5>${{ $product->price }}</h5>
-                        </div>
-                    </div>
-                </div>
+                @include('front.components.products.single')
             @endforeach
         </div>
     </div>
