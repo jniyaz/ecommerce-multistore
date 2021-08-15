@@ -79,7 +79,7 @@
             </div>
         </nav>
 
-        {{-- @if(session()->has('message'))
+        @if(session()->has('message'))
             <div class="alert alert-success" role="alert">
                 <strong>{{ session('message') }}</strong>
             </div>
@@ -89,7 +89,7 @@
             <div class="alert alert-danger" role="alert">
                 <strong>{{ session('error') }}</strong>
             </div>
-        @endif --}}
+        @endif
 
         <main class="py-4">
             @yield('content')

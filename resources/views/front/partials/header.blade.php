@@ -13,7 +13,7 @@
             <div class="electronics-login-register">
                 <ul>
                     <li><a href="#"><i class="pe-7s-users"></i>My Account</a></li>
-                    <li><a data-toggle="modal" data-target="#exampleCompare" href="#"><i class="pe-7s-repeat"></i>Compare</a></li>
+                    {{-- <li><a data-toggle="modal" data-target="#exampleCompare" href="#"><i class="pe-7s-repeat"></i>Compare</a></li> --}}
                     <li><a href="#"><i class="pe-7s-like"></i>Wishlist</a></li>
                     <li><a href="#"><i class="pe-7s-flag"></i>US</a></li>
                     <li><a class="border-none" href="#"><span>$</span>USD</a></li>

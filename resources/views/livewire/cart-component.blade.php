@@ -65,4 +65,4 @@
             <span>No Items in the cart.</span>
         </div>
     @endif
-<div>
+</div>
