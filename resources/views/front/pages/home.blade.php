@@ -46,77 +46,38 @@
                 <ul>
                     <li><a href="#">home <i class="pe-7s-angle-down"></i> <span class="sticker-new">hot</span></a>
                         <ul class="single-dropdown">
-                            <li><a href="index.html">Fashion</a></li>
-                            <li><a href="index-fashion-2.html">Fashion style 2</a></li>
-                            <li><a href="index-fruits.html">fruits</a></li>
-                            <li><a href="index-book.html">book</a></li>
-                            <li><a href="index-electronics.html">electronics</a></li>
-                            <li><a href="index-electronics-2.html">electronics style 2</a></li>
-                            <li><a href="index-food.html">food & drink</a></li>
-                            <li><a href="index-furniture.html">furniture</a></li>
-                            <li><a href="index-handicraft.html">handicraft</a></li>
-                            <li><a target="_blank" href="index-smart-watch.html">smart watch</a></li>
-                            <li><a href="index-sports.html">sports</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">page </a>
-                        <ul class="single-dropdown">
-                            <li><a href="about-us.html">about us</a></li>
-                            <li><a href="menu-list.html">menu list</a></li>
-                            <li><a href="login.html">login</a></li>
-                            <li><a href="register.html">register</a></li>
-                            <li><a href="cart.html">cart page</a></li>
-                            <li><a href="checkout.html">checkout</a></li>
-                            <li><a href="wishlist.html">wishlist</a></li>
-                            <li><a href="contact.html">contact</a></li>
+                            <li><a href="#">Iphone</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">Dell</a></li>
+                            <li><a href="#">Microsoft</a></li>
                         </ul>
                     </li>
                     <li><a href="#">shop <i class="pe-7s-angle-down"></i> <span class="sticker-new">hot</span></a>
                         <div class="category-menu-dropdown shop-menu">
                             <div class="category-dropdown-style category-common2 mb-30">
-                                <h4 class="categories-subtitle"> shop layout</h4>
+                                <h4 class="categories-subtitle">Smart Phone</h4>
                                 <ul>
-                                    <li><a href="shop-grid-2-col.html"> grid 2 column</a></li>
-                                    <li><a href="shop-grid-3-col.html"> grid 3 column</a></li>
-                                    <li><a href="shop.html">grid 4 column</a></li>
-                                    <li><a href="shop-grid-box.html">grid box style</a></li>
-                                    <li><a href="shop-list-1-col.html"> list 1 column</a></li>
-                                    <li><a href="shop-list-2-col.html">list 2 column</a></li>
-                                    <li><a href="shop-list-box.html">list box style</a></li>
-                                    <li><a href="cart.html">shopping cart</a></li>
-                                    <li><a href="wishlist.html">wishlist</a></li>
+                                    <li><a href="#">Iphone</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Pixel</a></li>
+                                    <li><a href="#">OnePlus</a></li>
                                 </ul>
                             </div>
                             <div class="category-dropdown-style category-common2 mb-30">
-                                <h4 class="categories-subtitle"> product details</h4>
+                                <h4 class="categories-subtitle">Laptops</h4>
                                 <ul>
-                                    <li><a href="product-details.html">tab style 1</a></li>
-                                    <li><a href="product-details-2.html">tab style 2</a></li>
-                                    <li><a href="product-details-3.html"> tab style 3</a></li>
-                                    <li><a href="product-details-4.html">sticky style</a></li>
-                                    <li><a href="product-details-5.html">sticky style 2</a></li>
-                                    <li><a href="product-details-6.html">gallery style</a></li>
-                                    <li><a href="product-details-7.html">gallery style 2</a></li>
-                                    <li><a href="product-details-8.html">fixed image style</a></li>
-                                    <li><a href="product-details-9.html">fixed image style 2</a></li>
+                                    <li><a href="#">Dell</a></li>
+                                    <li><a href="#">Microsoft</a></li>
                                 </ul>
                             </div>
                             <div class="mega-banner-img">
-                                <a href="single-product.html">
+                                <a href="#">
                                     <img src="/assets/img/banner/18.jpg" alt="">
                                 </a>
                             </div>
                         </div>
                     </li>
-                    <li><a href="#">blog <i class="pe-7s-angle-down"></i> <span class="sticker-new">hot</span></a>
-                        <ul class="single-dropdown">
-                            <li><a href="blog.html">blog 3 colunm</a></li>
-                            <li><a href="blog-2-col.html">blog 2 colunm</a></li>
-                            <li><a href="blog-sidebar.html">blog sidebar</a></li>
-                            <li><a href="blog-details.html">blog details</a></li>
-                            <li><a href="blog-details-sidebar.html">blog details 2</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#">blog</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
             </nav>
@@ -130,7 +91,7 @@
                 <div class="slider-content-4 fadeinup-animated">
                     <h2 class="animated">Say hello! to the <br>future.</h2>
                     <h4 class="animated">Best Product With warranty  </h4>
-                    <a class="electro-slider-btn btn-hover animated" href="product-details.html">buy now</a>
+                    <a class="electro-slider-btn btn-hover animated" href="#">buy now</a>
                 </div>
             </div>
         </div>
@@ -139,7 +100,7 @@
                 <div class="slider-content-4 fadeinup-animated">
                     <h2 class="animated">Say hello! to the <br>future.</h2>
                     <h4 class="animated">Best Product With warranty  </h4>
-                    <a class="electro-slider-btn btn-hover animated" href="product-details.html">buy now</a>
+                    <a class="electro-slider-btn btn-hover animated" href="#">buy now</a>
                 </div>
             </div>
         </div>
@@ -166,7 +127,7 @@
                 <h3>Play with flexible</h3>
                 <p>Multicontrol Smooth Controller, Black Color All Buttons
                     <br>are somooth, Super Shine.</p>
-                <a class="btn-hover flexible-btn" href="product-details.html">Buy Now</a>
+                <a class="btn-hover flexible-btn" href="#">Buy Now</a>
             </div>
         </div>
     </div>
@@ -199,7 +160,7 @@
                                 <i class="icofont icofont-star yellow"></i>
                                 <i class="icofont icofont-star yellow"></i>
                             </div>
-                            <h4><a href="product-details.html">desktop C27F551</a></h4>
+                            <h4><a href="#">desktop C27F551</a></h4>
                             <span>Headphone</span>
                             <h5>$133.00</h5>
                         </div>
@@ -233,7 +194,7 @@
                                             <i class="icofont icofont-star yellow"></i>
                                             <i class="icofont icofont-star yellow"></i>
                                         </div>
-                                        <h4><a href="product-details.html">Play Station</a></h4>
+                                        <h4><a href="#">Play Station</a></h4>
                                         <h5>$145.00</h5>
                                     </div>
                                 </div>
@@ -261,7 +222,7 @@
                                             <i class="icofont icofont-star yellow"></i>
                                             <i class="icofont icofont-star yellow"></i>
                                         </div>
-                                        <h4><a href="product-details.html">Joy Stick</a></h4>
+                                        <h4><a href="#">Joy Stick</a></h4>
                                         <h5>$145.00</h5>
                                     </div>
                                 </div>
@@ -289,7 +250,7 @@
                                             <i class="icofont icofont-star yellow"></i>
                                             <i class="icofont icofont-star yellow"></i>
                                         </div>
-                                        <h4><a href="product-details.html">Awesome Tab</a></h4>
+                                        <h4><a href="#">Awesome Tab</a></h4>
                                         <h5>$145.00</h5>
                                     </div>
                                 </div>
@@ -317,7 +278,7 @@
                                             <i class="icofont icofont-star yellow"></i>
                                             <i class="icofont icofont-star"></i>
                                         </div>
-                                        <h4><a href="product-details.html">Trimmer C27F401</a></h4>
+                                        <h4><a href="#">Trimmer C27F401</a></h4>
                                         <h5>$145.00</h5>
                                     </div>
                                 </div>
@@ -345,7 +306,7 @@
                                             <i class="icofont icofont-star yellow"></i>
                                             <i class="icofont icofont-star yellow"></i>
                                         </div>
-                                        <h4><a href="product-details.html">Timer C27F500</a></h4>
+                                        <h4><a href="#">Timer C27F500</a></h4>
                                         <h5>$145.00</h5>
                                     </div>
                                 </div>
@@ -373,7 +334,7 @@
                                             <i class="icofont icofont-star yellow"></i>
                                             <i class="icofont icofont-star"></i>
                                         </div>
-                                        <h4><a href="product-details.html">Joy Stick</a></h4>
+                                        <h4><a href="#">Joy Stick</a></h4>
                                         <h5>$145.00</h5>
                                     </div>
                                 </div>
@@ -390,7 +351,7 @@
         <div class="androit-banner-img bg-img" style="background-image: url(/assets/img/banner/36.jpg)">
             <div class="androit-banner-content">
                 <h3>Xolo Fast T2 Smartphone, Android <br>7.0 Unlocked.</h3>
-                <a href="product-details.html">Buy Now →</a>
+                <a href="#">Buy Now →</a>
             </div>
             <div class="banner-price text-center">
                 <div class="banner-price-position">

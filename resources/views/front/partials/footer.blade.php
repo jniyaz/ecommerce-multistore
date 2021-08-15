@@ -138,8 +138,8 @@
                                     <span>Address:</span>
                                 </div>
                                 <div class="footer-info-content2">
-                                    <p>77 Seventh Streeth Banasree
-                                        <br>Road Rampura -2100 Dhaka</p>
+                                    <p>11, Jalan Abdullah Street, Brickfields
+                                        <br>40470, WP-Kuala Lumpur, Malaysia.</p>
                                 </div>
                             </div>
                             <div class="footer-address-electro">
@@ -147,8 +147,8 @@
                                     <span>Phone:</span>
                                 </div>
                                 <div class="footer-info-content2">
-                                    <p>+11 (019) 2518 4203
-                                        <br>+11 (251) 2223 3353</p>
+                                    <p>+60-12304567-8901
+                                    <br>+60-12304567-8901</p>
                                 </div>
                             </div>
                             <div class="footer-address-electro">
@@ -156,8 +156,7 @@
                                     <span>Email:</span>
                                 </div>
                                 <div class="footer-info-content2">
-                                    <p><a href="#">domain@mail.com</a>
-                                        <br><a href="#">company@domain.info</a></p>
+                                    <p><a href="#">nlabs@outlook.com</a></p>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +217,7 @@
                         </div>
                         <div class="footer-services-content">
                             <h3>Free Shipping</h3>
-                            <p>Free Shipping on Bangladesh</p>
+                            <p>Free Shipping (West Malaysia)</p>
                         </div>
                     </div>
                 </div>
@@ -229,7 +228,6 @@
                         </div>
                         <div class="footer-services-content">
                             <h3>Money Guarentee</h3>
-                            <p>Free Shipping on Bangladesh</p>
                         </div>
                     </div>
                 </div>
@@ -240,7 +238,6 @@
                         </div>
                         <div class="footer-services-content">
                             <h3>Online Support</h3>
-                            <p>Free Shipping on Bangladesh</p>
                         </div>
                     </div>
                 </div>
