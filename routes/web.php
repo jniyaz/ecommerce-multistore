@@ -9,6 +9,12 @@
 // Home
 Route::get('/', 'HomePageController@index')->name('home.index');
 
+// Search
+Route::get('/products/search', 'ProductController@search')->name('search.products');
+
+// Products
+Route::resource('/products', 'ProductController');
+
 // Cart
 Route::get('/cart', 'CartController@index')->name('cart.index')->middleware('auth');
 Route::get('/cart/add/{product}', 'CartController@add')->name('cart.add')->middleware('auth');
@@ -26,9 +32,6 @@ Route::resource('/orders', 'OrderController')->middleware('auth');
 
 // shops
 Route::resource('/shops', 'ShopController')->middleware('auth');
-
-// Products
-Route::resource('/products', 'ProductController');
 
 // Auth
 Auth::routes();
