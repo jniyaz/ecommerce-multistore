@@ -2,17 +2,6 @@
 
 @section('content')
 <div>
-    <div class="breadcrumb-area pt-205 pb-210" style="background-image: url(/assets/img/bg/breadcrumb.jpg)">
-        <div class="container">
-            <div class="breadcrumb-content text-center">
-                <h2>product details</h2>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li> product details </li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="product-details ptb-100 pb-90">
         <div class="container">
             <div class="row">
@@ -68,7 +57,7 @@
                 </div>
                 <div class="col-md-12 col-lg-5 col-12">
                     <div class="product-details-content">
-                        <h3>Handcrafted Supper Mug</h3>
+                        <h3>{{ $product->name }}</h3>
                         <div class="rating-number">
                             <div class="quick-view-rating">
                                 <i class="pe-7s-star red-star"></i>
@@ -82,9 +71,9 @@
                             </div>
                         </div>
                         <div class="details-price">
-                            <span>$120.00</span>
+                            <span>${{ $product->price }}</span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmol tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim veni quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
+                        {!! $product->description !!}
                         <div class="quick-view-select">
                             <div class="select-option-part">
                                 <label>Size*</label>
@@ -111,7 +100,7 @@
                                 <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
                             </div>
                             <div class="quickview-btn-cart">
-                                <a class="btn-hover-black" href="#">add to cart</a>
+                                <a class="btn-hover-black" href="{{ route('cart.add', $product->id) }}">add to cart</a>
                             </div>
                             <div class="quickview-btn-wishlist">
                                 <a class="btn-hover" href="#"><i class="pe-7s-like"></i></a>

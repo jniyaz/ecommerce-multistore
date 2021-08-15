@@ -27,6 +27,11 @@ class ProductController extends Controller
         return view('front.pages.products.index', compact('categoryName', 'products'));
     }
 
+    public function show(Product $product)
+    {
+        return view('front.pages.products.details', compact('product'));
+    }
+
     public function search(Request $request)
     {
         $query = $request->input('q');
