@@ -12,9 +12,9 @@
                     <a class="action-like" title="Wishlist" href="#">
                         <i class="pe-7s-like"></i>
                     </a>
-                    {{-- <a class="action-repeat" title="Compare" href="#" data-toggle="modal" data-target="#exampleCompare" >
-                        <i class="pe-7s-repeat"></i>
-                    </a> --}}
+                    <a class="action-look" href="{{ route('products.show', $product) }}">
+                        <i class="pe-7s-look"></i>
+                    </a>
                 </div>
             </div>
         </div>
