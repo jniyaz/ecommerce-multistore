@@ -4,6 +4,17 @@
 <div class="container">
     <div class="col-12">
         <h3>Register Your Shop</h3>
+        @if(session()->has('message'))
+            <div class="alert alert-success" role="alert">
+                <strong>{{ session('message') }}</strong>
+            </div>
+        @endif
+
+        @if(session()->has('error'))
+            <div class="alert alert-danger" role="alert">
+                <strong>{{ session('error') }}</strong>
+            </div>
+        @endif
         <form class="mt-3" action="{{ route('shops.store') }}" method="post">
             @csrf
             <div class="form-group">

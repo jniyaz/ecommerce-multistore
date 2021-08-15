@@ -53,10 +53,12 @@ class ShopController extends Controller
             $q->where('name', 'admin');
         })->get();
 
-        Mail::to($admins)->send(new ShopActivationRequest($shop));
+        foreach ($admins as $key => $admin) {
+            \Mail::to($admin->email)->send(new ShopActivationRequest($shop));
+        }
 
         // redirect
-        return redirect()->route('products.home')->withMessage('Create shop request has been sent.');
+        return redirect()->route('shops.create')->withMessage('Create shop request has been sent successfully.');
     }
 
     /**

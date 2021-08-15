@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Coupon;
 use App\Product;
 use Illuminate\Http\Request;
-
 class CartController extends Controller
 {
 
@@ -44,5 +44,28 @@ class CartController extends Controller
     {
         $cartItems = \Cart::session(auth()->id())->remove($itemId);
         return back();
+    }
+
+    public function applyCoupon()
+    {
+        $couponCode = request('coupon_code');
+        $coupon = Coupon::where(['code' => $couponCode, 'is_active' => 1])->first();
+
+        if(!$coupon) {
+            return back()->withMessage('Sorry, Invalid Coupon');
+        }
+
+        $condition = new \Darryldecode\Cart\CartCondition(array(
+            'name' => $coupon->name,
+            'type' => $coupon->type,
+            // 'target' => 'subtotal', // this condition will be applied to cart's subtotal when getSubTotal() is called.
+            'target' => 'total',
+            'value' => $coupon->value,
+        ));
+
+        \Cart::condition($condition);
+        \Cart::session(auth()->user()->id)->condition($condition);
+
+        return back()->withMessage('Congrats, Coupon Applied');
     }
 }

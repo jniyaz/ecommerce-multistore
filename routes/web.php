@@ -20,6 +20,7 @@ Route::get('/cart', 'CartController@index')->name('cart.index')->middleware('aut
 Route::get('/cart/add/{product}', 'CartController@add')->name('cart.add')->middleware('auth');
 Route::get('/cart/update/{id}', 'CartController@update')->name('cart.update')->middleware('auth');
 Route::get('/cart/destory/{id}', 'CartController@destroy')->name('cart.destroy')->middleware('auth');
+Route::get('/cart/coupon', 'CartController@applyCoupon')->name('cart.coupon')->middleware('auth');
 
 // Checkout
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index')->middleware('auth');
