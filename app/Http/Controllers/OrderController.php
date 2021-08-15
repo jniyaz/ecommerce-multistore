@@ -102,7 +102,7 @@ class OrderController extends Controller
 
         // redirect
 
-        return redirect()->route('products.home')->withMessage('Your order has been placed.');
+        return redirect()->route('home.index')->withMessage('Your order has been placed.');
     }
 
     /**
