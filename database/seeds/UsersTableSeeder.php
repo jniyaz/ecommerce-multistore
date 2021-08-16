@@ -21,8 +21,8 @@ class UsersTableSeeder extends Seeder
             array(
                 'id' => 1,
                 'role_id' => 1,
-                'name' => 'Niyaz',
-                'email' => 'niyaz.developer@gmail.com',
+                'name' => 'Admin 1',
+                'email' => 'admin@admin.com',
                 'avatar' => 'users/default.png',
                 'email_verified_at' => NULL,
                 'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
@@ -35,8 +35,8 @@ class UsersTableSeeder extends Seeder
             array(
                 'id' => 2,
                 'role_id' => 1,
-                'name' => 'Admin',
-                'email' => 'admin@ewebmall.com',
+                'name' => 'Admin 2',
+                'email' => 'admin2@admin.com',
                 'avatar' => 'users/default.png',
                 'email_verified_at' => NULL,
                 'password' => '$2y$10$l/FUUkcrPk79/9Pw7Om8C.TDfl6G9dFxj0OrxFDpeVt9lhSSJOt6u',
