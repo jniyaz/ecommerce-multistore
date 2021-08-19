@@ -1,7 +1,7 @@
 # Laravel Ecommerce Multi Seller Portal 
 
-This application is being built using Laravel, Livewire, JavaScript, Bootstrap technologies.
-Demo: At present, this application has no demo web site, Install locally.
+- This application is being built using Laravel, Livewire, JavaScript, Bootstrap technologies.
+- Demo: At present, this application has no demo web site, Install locally.
 
 ## Installation
 1. Clone the repo and `cd` into it
