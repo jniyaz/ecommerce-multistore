@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Coupon;
 use App\Product;
-use Illuminate\Http\Request;
 class CartController extends Controller
 {
 
@@ -66,5 +65,12 @@ class CartController extends Controller
         \Cart::session(auth()->user()->id)->condition($condition);
 
         return back()->withMessage('Congrats, Coupon Applied');
+    }
+
+    // Temp. Fix with named route issues with latest Laravel versins
+    // https://chrislloyd.co/fixing-laravel-php-8-error-unknown-named-parameter-error/
+    public function callAction($method, $parameters)
+    {
+        return parent::callAction($method, array_values($parameters));
     }
 }

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/assets/css/responsive.css">
     @livewireStyles
     <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
 </head>
 
 <body>

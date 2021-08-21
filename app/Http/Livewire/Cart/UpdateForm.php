@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Cart;
 
 use Livewire\Component;
 
-class CartUpdateForm extends Component
+class UpdateForm extends Component
 {
     public $item = null;
     public $quantity = 0;
@@ -28,6 +28,6 @@ class CartUpdateForm extends Component
 
     public function render()
     {
-        return view('livewire.cart-update-form');
+        return view('livewire.cart.update-form');
     }
 }

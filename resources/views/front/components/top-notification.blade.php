@@ -7,7 +7,7 @@
             </div>
             <div class="notification-btn-close">
                 <div class="notification-btn notification-btn-2">
-                    <a href="#">Shop Now</a>
+                    <a href="/products">Shop Now</a>
                 </div>
                 <div class="notification-close notification-icon-2 notification-icon">
                     <button><i class="pe-7s-close"></i></button>

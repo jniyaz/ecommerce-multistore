@@ -29,7 +29,7 @@
                 </a>
             </div>
             @include('front.components.nav-search')
-            @include('front.components.nav-cart')
+            <livewire:cart.navcart  />
             <div class="mobile-menu-area mobile-menu-none-block electro-2-menu">
                 <div class="mobile-menu">
                     <nav id="mobile-menu-active">

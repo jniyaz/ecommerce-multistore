@@ -1,5 +1,13 @@
 <div>
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
+    @if(session()->has('success_message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success_message') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
     @if(count($cartItems) > 0)
         <div class="table-content table-responsive">
             <table>
@@ -16,8 +24,10 @@
                 <tbody>
                     @foreach ($cartItems as $k => $item)
                         <tr>
-                            <td class="product-remove">
-                                <a onClick="return confirm('Are you sure, to delete this item from your cart?');" href="{{ route('cart.destroy', $item['id']) }}"><i class="pe-7s-close"></i></a>
+                            <td class="product-remove" x-data>
+                                {{-- <a href="#" onClick="return confirm('Are you sure, to delete this item from your cart?');"
+                                    wire:click.prevent="deleteItem({{ $item['id'] }})"><i class="pe-7s-close"></i></a> --}}
+                                <a @click="return confirm('Are you sure?') ? @this.deleteItem({{ $item['id'] }}) : false"><i class="pe-7s-close"></i></a>
                             </td>
                             <td class="product-thumbnail">
                                 <a href="#"><img src="/assets/img/cart/1.jpg" alt=""></a>
@@ -25,7 +35,7 @@
                             <td class="product-name"><a href="#">{{ $item['name'] }}</a></td>
                             <td class="product-price-cart"><span class="amount">${{ $item['price'] }}</span></td>
                             <td class="product-quantity">
-                                <livewire:cart-update-form :item="$item" :key="$item['id']"  />
+                                <livewire:cart.update-form :item="$item" :key="$item['id']"  />
                             </td>
                             <td class="product-subtotal">${{ \Cart::session(auth()->id())->get($item['id'])->getPriceSum() }}</td>
                         </tr>
@@ -36,14 +46,14 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="coupon-all">
-                    <div class="coupon">
+                    {{-- <div class="coupon">
+                        <input class="button" name="update_cart" value="Update cart" type="submit">
+                    </div> --}}
+                    <div class="coupon2">
                         <form action="{{ route('cart.coupon') }}" method="GET">
                             <input id="coupon_code" required class="input-text" name="coupon_code" value="" placeholder="Coupon code" type="text">
                             <input class="button" value="Apply coupon" type="submit">
                         </form>
-                    </div>
-                    <div class="coupon2">
-                        <input class="button" name="update_cart" value="Update cart" type="submit">
                     </div>
                 </div>
             </div>

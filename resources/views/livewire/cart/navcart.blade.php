@@ -17,8 +17,8 @@
                             <h5><a href="#">{{ $item->name }}</a></h5>
                             <span>${{ $item->price }} x {{ $item->quantity }}</span>
                         </div>
-                        <div class="cart-delete">
-                            <a onClick="return confirm('Are you sure, to delete this item from your cart?');" href="{{ route('cart.destroy', $item->id) }}"><i class="ti-trash"></i></a>
+                        <div x-data class="cart-delete">
+                            <a @click="return confirm('Are you sure?') ? @this.deleteItem({{ $item['id'] }}) : false"><i class="ti-trash"></i></a>
                         </div>
                     </li>
                 @endforeach
