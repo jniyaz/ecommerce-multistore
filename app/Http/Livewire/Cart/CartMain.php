@@ -17,13 +17,6 @@ class CartMain extends Component
         $this->cartItems = \Cart::session(auth()->id())->getContent()->toArray();
     }
 
-    public function deleteItem($id)
-    {
-        \Cart::session(auth()->id())->remove($id);
-        $this->emit('cartDeleted');
-        $this->mount();
-    }
-
     public function onCartItemUpdate()
     {
         $this->mount();
@@ -31,6 +24,13 @@ class CartMain extends Component
 
     public function onCartItemDelete()
     {
+        $this->mount();
+    }
+
+    public function deleteItem($id)
+    {
+        \Cart::session(auth()->id())->remove($id);
+        $this->emit('cartDeleted');
         $this->mount();
     }
 

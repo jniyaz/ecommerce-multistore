@@ -19,9 +19,9 @@ class Navcart extends Component
         }
     }
 
-    public function deleteItem($itemId)
+    public function deleteItem($id)
     {
-        \Cart::session(auth()->id())->remove($itemId);
+        \Cart::session(auth()->id())->remove($id);
         $this->emit('cartDeleted');
     }
 

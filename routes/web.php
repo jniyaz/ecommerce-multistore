@@ -4,6 +4,7 @@
 
 // Home
 Route::get('/', 'HomePageController@index')->name('home.index');
+
 // Search
 Route::get('/products/search', 'ProductController@search')->name('search.products');
 
@@ -11,11 +12,13 @@ Route::get('/products/search', 'ProductController@search')->name('search.product
 Route::resource('/products', 'ProductController');
 
 // Cart
-Route::get('/cart', 'CartController@index')->name('cart.index')->middleware('auth');
-Route::get('/cart/add/{product}', 'CartController@add')->name('cart.add')->middleware('auth');
-Route::get('/cart/update/{id}', 'CartController@update')->name('cart.update')->middleware('auth');
-Route::get('/cart/destory/{id}', 'CartController@destroy')->name('cart.destroy')->middleware('auth');
-Route::get('/cart/coupon', 'CartController@applyCoupon')->name('cart.coupon')->middleware('auth');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/cart', 'CartController@index')->name('cart.index');
+    Route::get('/cart/add/{product}', 'CartController@add')->name('cart.add');
+    Route::get('/cart/update/{id}', 'CartController@update')->name('cart.update');
+    Route::get('/cart/destory/{id}', 'CartController@destroy')->name('cart.destroy');
+    Route::get('/cart/coupon', 'CartController@applyCoupon')->name('cart.coupon');
+});
 
 // Checkout
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index')->middleware('auth');
