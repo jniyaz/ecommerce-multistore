@@ -95,6 +95,26 @@
                                 </div>
                             @endforeach
 
+                            {{-- Product Attributes --}}
+                            @php
+                                $attributeOptions = \App\ProductAttribute::with('values')->get();
+                                $attributeData = json_decode($dataTypeContent->product_attributes,true);
+                            @endphp
+                            @foreach ($attributeOptions as $option)
+                                <div class="form-group">
+                                    <label for="">{{ ucfirst($option->name) }}</label>
+                                    <select name="product_attributes[{{$option->name}}]" class="form-control">
+                                        <option value="">-</option>
+                                        @foreach ($option->values as $val)
+                                        <option
+                                        {{ (!empty($attributeData[$option->name]) && $attributeData[$option->name] == $val->value) ? 'selected' : '' }}
+                                        >{{$val->value}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            @endforeach
+                            {{-- end product attributes --}}
+
                         </div><!-- panel-body -->
 
                         <div class="panel-footer">
